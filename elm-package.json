@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "summary": "A Dialog UI module based on Material Design Lite",
     "repository": "https://github.com/damukles/elm-dialog.git",
     "license": "BSD3",

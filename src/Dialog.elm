@@ -11,19 +11,12 @@ import Html.Attributes exposing (..)
 
 {-| The Dialog Configuration.
 
-## styles
-Set inline styles for the dialog div. You may e.g. want to set a width.
-
-## title
-Sets header title. Since MDL does the styling, you only need to provide
+`styles` sets inline styles for the dialog div. You may e.g. want to set a width.
+`title` sets a header title. Since MDL does the styling, you only need to provide
 a string.
-
-## content
-Here is where you put all your Html to be displayed in the Dialog's body.
-
-## actionBar
-At the bottom of the Dialog you may want to place some actions, at least one
-close button.
+`content` is where you put all your Html to be displayed in the Dialog's body.
+`actionBar` sits at bottom of the Dialog. You may want to place some actions there,
+usually at least one close button.
 
 -}
 type alias Config msg =
@@ -41,6 +34,7 @@ type alias Config msg =
         }
 
 In the init function initialize it like this:
+
     init =
         { myDialogVisible = Dialog.hidden
         }
