@@ -20,5 +20,5 @@ elm package install damukles/elm-dialog
 ```
 
 ## Getting started
-Look at the [example](examples/Main.elm)
+Look at the [example](https://github.com/damukles/elm-dialog/tree/master/examples)
 and read the module documentation
