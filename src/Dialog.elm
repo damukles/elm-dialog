@@ -1,9 +1,31 @@
-module View.Dialog exposing (Config, Visible, visible, hidden, render)
+module Dialog exposing (Config, Visible, visible, hidden, render)
+
+{-| Elm Mdl Dialog
+
+@docs Config, render, Visible, hidden, visible
+-}
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
+{-| The Dialog Configuration.
+
+## styles
+Set inline styles for the dialog div. You may e.g. want to set a width.
+
+## title
+Sets header title. Since MDL does the styling, you only need to provide
+a string.
+
+## content
+Here is where you put all your Html to be displayed in the Dialog's body.
+
+## actionBar
+At the bottom of the Dialog you may want to place some actions, at least one
+close button.
+
+-}
 type alias Config msg =
     { styles : List ( String, String )
     , title : String
@@ -12,15 +34,31 @@ type alias Config msg =
     }
 
 
+{-| A helper to make things more humand readable. Use it like this:
+
+    type alias Model =
+        { myDialogVisible : Visible
+        }
+
+In the init function initialize it like this:
+    init =
+        { myDialogVisible = Dialog.hidden
+        }
+
+-}
 type alias Visible =
     Bool
 
 
+{-| A helper function that return False to make things more human readable
+-}
 hidden : Visible
 hidden =
     False
 
 
+{-| A helper function that return True to make things more human readable
+-}
 visible : Visible
 visible =
     True
@@ -35,11 +73,12 @@ visible =
         , actionBar = [ button [ onClick ToggleMyDialogVisible ] [ text "Close" ] ] }
         model.myDialogVisible
 
-You take care of the open and close Msg yourself. Just include a Bool in you model,
-that holds the Visible value for each Dialog:
+You take care of the open and close Msg yourself. Just include a Visible in your
+model for each Dialog.
 
-    init =
-        { myDialogVisible = Dialog.hidden }
+    type alias Model =
+        { myDialogVisible : Visible
+        }
 
     update msg model =
         case msg of
