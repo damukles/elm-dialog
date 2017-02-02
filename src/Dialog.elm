@@ -67,7 +67,7 @@ visible =
 {-| Render the Dialog
 
     Dialog.render
-        { styles = [ "width" "40%" ]
+        { styles = [ ("width", "40%") ]
         , title = "My Dialog"
         , content = [ text "This is my dialog's body." ]
         , actionBar = [ button [ onClick ToggleMyDialogVisible ] [ text "Close" ] ] }
