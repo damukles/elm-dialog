@@ -44,14 +44,14 @@ type alias Visible =
     Bool
 
 
-{-| A helper function that return False to make things more human readable
+{-| A helper function that returns False to make things more human readable
 -}
 hidden : Visible
 hidden =
     False
 
 
-{-| A helper function that return True to make things more human readable
+{-| A helper function that returns True to make things more human readable
 -}
 visible : Visible
 visible =
@@ -96,7 +96,6 @@ render config visible =
             [ div [ style dialogStyle_ ]
                 [ div [ class "mdl-dialog__title" ] [ text config.title ]
                 , div [ class "mdl-dialog__content" ] config.content
-                , br [] []
                 , div [ class "mdl-dialog__actions" ] config.actionBar
                 ]
             ]
