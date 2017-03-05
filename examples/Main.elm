@@ -62,7 +62,7 @@ dialogButton caption =
 
 
 -- This loads mdl styles inline and is for demonstration purposes in elm reactor only
--- Thanks Debois and Damoc
+-- Thanks debois and pdamoc
 
 
 loadMdlHack : Html Msg -> Html Msg

@@ -2,9 +2,9 @@
 A Dialog UI module based on Material Design Lite
 
 ## Dependencies
-There is only one: Material Desgin Lite
+There is only one: Material Design Lite
 
-Make sure to include mdl css in your index.html as described here:
+Make sure to include the mdl css in your index.html as described here:
 https://getmdl.io/started/index.html
 
 e.g.

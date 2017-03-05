@@ -89,11 +89,11 @@ render config visible =
             else
                 (,) "display" "none"
 
-        dialogStyle_ =
+        dialogStyle =
             dialogBaseStyle ++ config.styles
     in
         div [ style <| overlayStyle ++ [ visibility ] ]
-            [ div [ style dialogStyle_ ]
+            [ div [ style dialogStyle ]
                 [ div [ class "mdl-dialog__title" ] [ text config.title ]
                 , div [ class "mdl-dialog__content" ] config.content
                 , div [ class "mdl-dialog__actions" ] config.actionBar
