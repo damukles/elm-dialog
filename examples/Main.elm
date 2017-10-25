@@ -1,7 +1,7 @@
-module Main exposing (..)
+module Main exposing (main)
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, div, button, text, node)
+import Html.Attributes exposing (style, class, type_)
 import Html.Events exposing (onClick)
 import Dialog
 

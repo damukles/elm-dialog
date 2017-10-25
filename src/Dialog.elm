@@ -5,8 +5,8 @@ module Dialog exposing (Config, Visible, visible, hidden, render)
 @docs Config, render, Visible, hidden, visible
 -}
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, div, text)
+import Html.Attributes exposing (style, class)
 
 
 {-| The Dialog Configuration.
@@ -122,6 +122,6 @@ dialogBaseStyle =
     , (,) "background-color" "white"
     , (,) "padding" "8px 16px 8px 16px"
     , (,) "border-radius" "4px"
-    , (,) "border" "1px solid #757575"
+    , (,) "border" "1px solid rgba(0,0,0,0.5)"
     , (,) "box-shadow" "4px 4px 5px 0px rgba(97,97,97,1)"
     ]
